@@ -59,7 +59,7 @@ class Lexema:
         """
         Retorna uma representação de string do lexema e seu token associado.
         """
-        return f'Lexema: {self.valor} | Token: {self.token}'
+        return f'Lexema: {self.valor}\t\t|\t\tToken: {self.token}'
     
     def get_significado(self):
         """
@@ -136,11 +136,13 @@ class Identificador(Token):
     def verifica_lexema(self, expressao):
         if len(expressao) < 1 or len(expressao) > 100:
             return False  # O comprimento da expressão está fora do intervalo permitido
+        
+        if not expressao[0].isalpha():
+            return False  # A primeira letra não é uma letra
 
         for caractere in expressao[1:]:
             if not (caractere.isalnum() or caractere.isalpha()):
                 return False  # Um caractere não é uma letra ou um dígito
-
         return True
     
     def get_expressao(self, expressao):
@@ -288,8 +290,8 @@ class AnalisadorLexico:
 
         :return: O relatório completo.
         """
-        text='\n========== Relatório de Analisador Léxico ==========\n\n'
-        text+=f'========== Expressão Lógica ==========\n\n{self.expressao}'
-        text+=f'\n\n========== Significado da Expressão Lógica ==========\n\n{self.get_expressao_significado()}'
-        text+=f'\n\n========== Relação de Lexemas e Tokens ==========\n\n{self.list_lexemas_str()}'
+        text='\n============== Relatório de Analisador Léxico ===============\n\n'
+        text+=f'===================== Expressão Lógica ======================\n\n{self.expressao}'
+        text+=f'\n\n============== Significado da Expressão Lógica ==============\n\n{self.get_expressao_significado()}'
+        text+=f'\n\n================ Relação de Lexemas e Tokens ================\n\n{self.list_lexemas_str()}'
         return text
