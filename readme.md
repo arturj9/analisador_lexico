@@ -12,7 +12,7 @@ Para usar o Analisador Léxico, siga as etapas abaixo:
 
 2. Certifique-se de que você tenha o Python instalado no seu sistema.
 
-3. No diretório do projeto, execute o código Python para analisar uma expressão. Por exemplo:
+3. No diretório do projeto, execute main.py para analisar a expressão do arquivo `entrada.in`. Por exemplo:
 
    ```python
    python main.py
