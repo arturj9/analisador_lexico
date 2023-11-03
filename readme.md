@@ -3,7 +3,7 @@
 Este Analisador Léxico é uma ferramenta para analisar expressões lógicas e identificar tokens e lexemas. 
 
 ## Documentação
-
+[Site](https://arturj9.github.io/analisador_lexico/)
 ## Uso
 
 Para usar o Analisador Léxico, siga as etapas abaixo:
